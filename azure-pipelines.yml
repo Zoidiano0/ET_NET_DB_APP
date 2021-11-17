@@ -34,3 +34,12 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: PublishBuildArtifacts@1
+- task: AzureMysqlDeployment@1
+  inputs:
+    azureSubscription: 'Azure for Students(8e3df91f-fbde-4ce3-84bc-0a419b2c744b)'
+    ServerName: 'NetAppDB'
+    DatabaseName: 'AppDB'
+    SqlUsername: 'adminet'
+    SqlPassword: 'abc123!'
+    TaskNameSelector: 'InlineSqlTask'
+    IpDetectionMethod: 'AutoDetect'
