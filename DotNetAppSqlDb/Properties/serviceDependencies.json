@@ -4,13 +4,16 @@
       "type": "appInsights",
       "connectionId": "APPINSIGHTS_CONNECTIONSTRING"
     },
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings"
-    },
     "secrets1": {
       "type": "secrets",
       "connectionId": "VaultUri"
+    },
+    "secrets2": {
+      "type": "secrets"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings"
     }
   }
 }

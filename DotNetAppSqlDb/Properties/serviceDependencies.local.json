@@ -6,17 +6,20 @@
       "type": "secrets.keyVault",
       "connectionId": "VaultUri"
     },
-    "mssql1": {
-      "secretStore": "AzureKeyVault",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/etserverapp/databases/DotNetAppSqlDb_db",
-      "type": "mssql.azure",
-      "connectionId": "ConnectionStrings"
-    },
     "appInsights1": {
       "secretStore": null,
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/Team2-ET-app",
       "type": "appInsights.azure",
       "connectionId": "APPINSIGHTS_CONNECTIONSTRING"
+    },
+    "secrets2": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/etserverapp/databases/DotNetAppSqlDb_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings"
     }
   }
 }
